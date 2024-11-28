@@ -8,5 +8,5 @@
   <img src="https://visitor-badge.laobi.icu/badge?page_id=chasingboy.appsx&left_color=green&right_color=#66ccff">
 </p>
 
-<img width="1154" alt="image" src="https://github.com/user-attachments/assets/87879581-7278-4e3f-8e89-02487f429acd">
+<img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/appsx.png">
 
