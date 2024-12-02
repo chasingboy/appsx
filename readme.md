@@ -77,6 +77,51 @@ root$ appsx --license license.appsx
 ```
 详细参考-> https://github.com/chasingboy/appsx/blob/main/activate.md
 
+### TODO
+* 增加基础漏洞扫描模块
+* 增加 pdf 报告导出模块
+* ... ...
+
+### config.yaml
+```
+# 设置 js 等文件下载路径，如果没有设置, 默认存放在桌面的 xworks 文件夹
+# setting work path where save results, default -> $HOME/desktop/xworks.
+workpath: ""
+
+# 设置 nuclei 和 chrome 浏览器的路径
+nuclei: "/tools/nuclei/nuclei"
+chrome: "/tools/chrome/Chromium.app/Contents/MacOS/Chromium"
+
+# 自定义添加 dirsx 扫描字典, 文件模式｜字符串
+dirsx:
+  payloads-file: "/tools/poc/wordlist.txt"
+
+  payloads:
+  - "admin"
+  ... ...
+
+# 设置爬虫允许后缀
+allow-extensions:
+  - ".js"
+  - ".php"
+  ... ...
+
+# 设置过滤的 js 文件
+script-blacks:
+  - "vue.min.js"
+  - "axios.min.js"
+  ... ...
+
+# 其他设置 ... ...
+```
+
+### 敏感信息扫描
+poc 来源 ——> 整合 nuclei file 类型 POC + 个人编写 POC
+* 识别用户信息-> 用户名｜密码｜邮箱｜key｜token｜...
+* 识别内网 IP 泄露
+* 识别文件名-> zip｜docx｜pdf｜excel｜...
+* 识别 js.map 文件泄露
+
 ### appsx -h
 ```bash
 ~ kali$ appsx -h
