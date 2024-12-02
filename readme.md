@@ -40,6 +40,7 @@ root$ appsx -u http://127.0.0.1 --headless
 root$ appsx -u http://127.0.0.1 --nuclei
 ```
 * 自动提取 API 信息并进行探测未授权漏洞
+  > fofa 任意找的 WEB
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/result.png">
 
 ### 结果保存
