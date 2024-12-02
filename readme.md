@@ -61,6 +61,7 @@ root$ appsx -u http://127.0.0.1 --nuclei
 ```
 
 ### 激活方式
+⚠️注意: **linux 系统需要在root权限下才能运行**
 ```bash
 # appsx -h
 Activation Options:
