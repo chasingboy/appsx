@@ -40,7 +40,7 @@ root$ appsx -u http://127.0.0.1 --headless
 root$ appsx -u http://127.0.0.1 --nuclei
 ```
 * 自动提取 API 信息并进行探测未授权漏洞
-<img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/result.png">
+<img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/resut.png">
 
 ### 结果保存
 默认保存在桌面的 xworks 文件夹，可通过 config.yaml 文件配置
