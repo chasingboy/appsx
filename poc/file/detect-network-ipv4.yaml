@@ -1,0 +1,20 @@
+id: file-analyse
+
+info:
+  name: File Analyse
+  author: xboy
+  severity: info
+  description: |
+    This process involves extracting host ipv4.
+  metadata:
+    verified: true
+  tags: file,js-analyse,js,javascript
+file:
+  - extensions:
+      - all
+
+    extractors:
+      - type: regex
+        name: network-ip
+        regex:
+          - "(?i)(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)((([\\-](1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])|/(1\\d|2\\d|3[0-2]|[1-9]))(\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d))?)?)"
