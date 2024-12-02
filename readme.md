@@ -60,8 +60,25 @@ root$ appsx -u http://127.0.0.1 --nuclei
     ├── ... ...
 ```
 
-### appsx -h
+### 激活方式
+```bash
+# appsx -h
+Activation Options:
+      --activate          enable to activate appsx
+      --activate-help     show activate help
+      --license=          set license file eg: --license license.appsx
+      --license-time      show license activated time and expiry time
+
+# 在当前目录生成 activate.appsx 文件, 通过邮件或者微信群提交该文件获取 license
+root$ appsx --activate
+
+# 激活 appsx
+root$ appsx --license license.appsx
 ```
+详细参考-> https://github.com/chasingboy/appsx/blob/main/activate.md
+
+### appsx -h
+```bash
 ~ kali$ appsx -h
 
           
@@ -111,3 +128,7 @@ Activation Options:
 Help Options:
   -h, --help              Show this help message
 ```
+
+### 免责声明
+请在使用本工具时遵循使用者以及目标系统所在国当地的相关法律法规，一切未授权测试均是不被允许的。对于因使用工具而引发的任何直接、间接、偶然、特殊性的损害均由**使用者承担责任**。
+详细内容请查看@https://github.com/chasingboy/appsx/blob/main/assets/readme.md
