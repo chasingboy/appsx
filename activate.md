@@ -15,6 +15,10 @@ root$ appsx --license license.appsx
 ```
 该工具没有开通知识星球，接受通过微信｜支付宝转账购买 license。
 
+**当前用户数: 7 (实时更新)**
+* 用户数: 0-30    69/year
+* 用户数: 30-100  89/year
+* 用户数: 100+    129/year
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/license.png">
 
 付款时请备注个人ID+年限，并在微信群或者邮箱(1215829953@qq.com)发送 activate.appsx 获取 license
