@@ -81,8 +81,8 @@ Activation Options:
 # 在当前目录生成 activate.appsx 文件, 通过邮件或者微信群提交该文件给开发者获取 license
 root$ appsx --activate
 
-# 激活 appsx
-root$ appsx --license license.appsx
+# 激活 appsx, 比如 license 文件: xxx-c3a9f4d1cca725543a2a10b2cf8a224a-license.appsx
+root$ appsx --license xxx-c3a9f4d1cca725543a2a10b2cf8a224a-license.appsx
 ```
 详细参考-> https://github.com/chasingboy/appsx/blob/main/activate.md
 
