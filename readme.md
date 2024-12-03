@@ -67,6 +67,8 @@ Chromium@https://vikyd.github.io/download-chromium-history-version/#/
 ```
 
 ### 激活方式
+执行命令生成 **activate.appsx 文件**, 通过邮件或者微信群提交 **activate.appsx文件** 获取 license
+
 ⚠️注意: **linux 系统需要在root权限下才能运行**
 ```bash
 # appsx -h
