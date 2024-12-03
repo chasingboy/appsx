@@ -1,7 +1,7 @@
 <h1 align="center">appsx</h1>
 <h3 align="center">appsx 是一款自动化信息收集｜敏感信息识别｜未授权漏洞扫描工具</h3>
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-V1.0.0-green?style=flat">
+  <img src="https://img.shields.io/badge/Version-V1.1.0-green?style=flat">
   <img src="https://img.shields.io/github/stars/chasingboy/appsx?style=flat&labelColor=rgb(41%2C52%2C52)&color=green">
   <img src="https://img.shields.io/github/issues/chasingboy/appsx">
   <img src="https://img.shields.io/github/downloads/chasingboy/appsx/total?style=flat&labelColor=rgb(41%2C52%2C52)&color=green">
@@ -42,6 +42,13 @@ root$ appsx -u http://127.0.0.1 --nuclei
   > fofa 任意找的 WEB
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/result.png">
 
+### chromium 下载
+--headless 模式需要在 config.yaml 文件配置 chromium
+
+**不要下载新版本, 新版本在爬取 http 链接时会自动转为 https, 导致访问出错, 108.x.x.x 以下的版本都是可以的**
+
+Chromium@https://vikyd.github.io/download-chromium-history-version/#/
+
 ### 结果保存
 默认保存在桌面的 xworks 文件夹，可通过 config.yaml 文件配置
 ```
@@ -79,7 +86,7 @@ root$ appsx --license license.appsx
 
 ### TODO
 * 增加基础漏洞扫描模块
-* 增加 pdf 报告导出模块
+* 增加 pdf｜docx 报告导出模块
 * ... ...
 
 ### config.yaml
@@ -88,7 +95,7 @@ root$ appsx --license license.appsx
 # setting work path where save results, default -> $HOME/desktop/xworks.
 workpath: ""
 
-# 设置 nuclei 和 chrome 浏览器的路径
+# 设置 nuclei 和 chromium 浏览器的路径
 nuclei: "/tools/nuclei/nuclei"
 chrome: "/tools/chrome/Chromium.app/Contents/MacOS/Chromium"
 
