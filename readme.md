@@ -67,7 +67,7 @@ Chromium@https://vikyd.github.io/download-chromium-history-version/#/
 ```
 
 ### 激活方式
-执行命令生成 **activate.appsx 文件**, 通过邮件或者微信群提交 **activate.appsx文件** 获取 license
+执行命令生成 **activate.appsx 文件**, 通过邮件｜微信群提交 **activate.appsx文件** 至开发者获取 license
 
 ⚠️注意: **linux 系统需要在root权限下才能运行**
 ```bash
@@ -78,7 +78,7 @@ Activation Options:
       --license=          set license file eg: --license license.appsx
       --license-time      show license activated time and expiry time
 
-# 在当前目录生成 activate.appsx 文件, 通过邮件或者微信群提交该文件获取 license
+# 在当前目录生成 activate.appsx 文件, 通过邮件或者微信群提交该文件给开发者获取 license
 root$ appsx --activate
 
 # 激活 appsx
