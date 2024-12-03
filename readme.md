@@ -10,7 +10,6 @@
 
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/appsx.png">
 
-### 即将发布
 ### 前言
 在WEB渗透测试中，经常需要收集前端js文件中的信息，比如提取API信息｜URL信息｜敏感信息等。appsx 工具的核心理念就是把这一过程自动化，能够提升渗透测试的效率。
 
