@@ -15,7 +15,7 @@
 
 ### 功能
 * 爬虫提供普通模式和 headless 模式
-* 自动爬取js| html| php| asp 等页面
+* 自动爬取js｜html｜php｜asp 等页面
 * 自动识别 webpack 打包的 js 文件
 * 下载爬取的文件并提取 API 信息
 * 批量测试 URL 和 API 信息
