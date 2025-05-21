@@ -50,8 +50,8 @@ Chromium@https://vikyd.github.io/download-chromium-history-version/#/
 ```
 # crawler-urls.txt   -> 爬取的 URL 结果
 # select-results.txt -> 提取的 API 结果
-# httpx-results.txt  -> URL|API 探测结果
-# static -> 下载的文件结果
+# httpx-results.txt  -> 探测的 API 结果
+# static -> 保存下载的文件
 2025-05-20-16-23-20-127.0.0.1 kali$ tree .
 .
 ├── crawler-urls.txt
