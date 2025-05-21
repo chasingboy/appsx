@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<meta http-equiv=X-UA-Compatible content="ie=edge">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@200,300&display=swap" rel=stylesheet>
+<title>APPSX安全扫描报告</title>
+<style>body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background-color:#f4f4f4;color:#333}.container{max-width:1000px;margin:0 auto;background-color:#fff;padding:20px 30px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.1)}header{text-align:center;margin-bottom:40px}.logo{font-family:'Arial',sans-serif;font-weight:bold;font-size:40px;color:#007bff;text-transform:uppercase;letter-spacing:3px;text-align:right;width:100%}.window{position:relative;background:#282c34;border-radius:8px;padding-top:32px;margin:20px 0;box-shadow:0 4px 12px rgba(0,0,0,0.2)}.dots{position:absolute;top:10px;left:10px;display:flex;gap:8px}.dot{width:10px;height:10px;border-radius:50%}.dot-red{background:#ff5f56}.dot-yellow{background:#ffbd2e}.dot-green{background:#27c93f}.window pre{margin:0;padding:0 8px 8px 8px;font-size:12px;white-space:pre-wrap;overflow-wrap:break-word}.window code{display:block;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;color:#abb2bf}.copy-button{position:absolute;top:5px;right:5px;background-color:transparent;color:white;border:0;border-radius:5px;cursor:pointer;font-size:10px}hr{border:0;height:2px;background-color:#3498db;width:100%;margin-bottom:20px}header h1{margin:0;font-size:36px;color:#007bff}header p{font-size:18px;color:#555}.content{margin-bottom:40px}h2{font-size:24px;color:#007bff;margin-bottom:10px;page-break-before:always}h3{font-size: 20px;color: #003366;padding: 3px 10px;background-color: #e6f2ff;border-left: 4px solid #4d94ff;border-radius: 0 5px 5px 0;}h4{margin:0}h4+p{margin-top:3px}ul{padding-bottom:20px}.table{width:100%;border-collapse:collapse;margin-top:10px}.table th,.table td{padding:12px;border:1px solid #cfe6ff;font-size:13px}.table th{background-color:#f3f9ff;color:#007bff}.risk-info{color:green;width:60px;text-align:center}.risk-low{color:green;width:60px;text-align:center}.risk-medium{color:orange;width:60px;text-align:center}.risk-high{color:red;width:60px;text-align:center}.risk-critical{color:red;width:60px;text-align:center}.footer{text-align:center;margin-top:40px;font-size:12px;color:#777}.toc{margin-top:150px}.message{position:fixed;top:20px;left:45%;padding:5px 20px;background-color:#e8f5e9;color:#67c23a;border-radius:5px;z-index:1000;display:none;font-size:13px}</style>
+</head>
+<body>
+<div class=container>
+<header>
+<div class=logo>appsx&nbsp;</div>
+<div style=margin-top:120px></div>
+<h1>APPSX 安全扫描报告</h1>
+<p>系统名称: <strong>127.0.0.1</strong></p>
+<p>报告日期: <strong>2025年05月21日</strong></p>
+</header>
+<div class="content toc">
+<h2>目录</h2><hr>
+<ol>
+<li><a href=#overview>扫描概述</a></li>
+<li><a href=#scope>扫描范围</a></li>
+<li><a href=#findings>漏洞列表</a></li>
+<li><a href=#details>漏洞详情</a></li>
+<li><a href=#appends>附录内容</a></li>
+</ol>
+</div>
+<div class=content id=overview>
+<h2>扫描概述</h2><hr>
+<p><p>安全扫描（Security Scanning）是一种系统化的自动化检测方法，旨在通过预定义的规则和检测机制，识别计算机系统、网络设备、应用程序或云环境中的已知安全漏洞、配置错误和潜在风险。安全扫描作为主动防御体系的重要组成部分，能够帮助组织持续监控资产安全状态，及时发现安全隐患。</p>
+<p>本次漏洞扫描的目的是快速评估目标网站的安全性，检测潜在的漏洞和安全风险，并为网站所有者及维护者提供改进建议。</p>
+
+<h3>免责声明</h3>
+<p>本工具扫描报告（以下简称"报告"）由[appsx 安全扫描工具]基于自动化扫描结果生成，仅作为初步安全评估参考，不构成专业渗透测试或安全审计。本报告不能替代专业安全团队的手动渗透测试、代码审计和安全架构评审和持续的安全监控机制。请在使用本工具时遵循使用者以及目标系统所在国当地的相关法律法规，一切未授权测试均是不被允许的。</p>
+<strong> 使用限制</strong>
+<ul>
+<li>本报告基于扫描时点的系统状态生成，不保证能够发现所有安全漏洞</li>
+<li>自动扫描工具存在误报（False Positive）和漏报（False Negative）的可能性</li>
+<li>报告中的漏洞评级仅为初步评估，实际风险需结合业务场景判断</li>
+</ul>
+
+<strong>责任免除</strong>
+<p>appsx 及开发者不对因以下情况导致的直接或间接损失承担责任：</p>
+<ul>
+<li>基于本报告做出的任何决策或采取的行动</li>
+<li>扫描过程中可能造成的服务中断或性能影响</li>
+<li>未被本报告发现的漏洞导致的安全事件</li>
+<li>报告内容被非授权方获取造成的后果</li>
+</ul>
+<strong>版权声明</strong>
+<p>本报告及 appsx 安全扫描工具仅供已授权用户内部使用，未经书面许可不得复制、传播或用于其他商业用途。</p></p>
+</div>
+<div class=content id=scope>
+<h2>扫描范围</h2><hr>
+<p>本次安全扫描包括以下内容：</p>
+<ul><li>敏感信息泄露</li>
+<li>中间件漏洞</li>
+<li>不安全的配置</li>
+<li>API 未授权访问</li>
+<li>XSS 跨站脚本攻击</li>
+<li>RCE 远程代码执行</li>
+<li>默认账户和弱密码</li>
+<li>身份验证与会话管理</li>
+<li>其他 OWASP Top 10 漏洞</li></ul>
+</div>
+<div class=content id=findings>
+<h2>漏洞列表</h2><hr>
+<p>appsx 安全扫描工具2025年05月21日对系统（ty-tyjqzx.wyuas.edu.cn）开展安全扫描评估测试，共发现 <strong>1</strong> 个漏洞，其中严重漏洞 <span class="risk-critical">0</span> 个，高危漏洞 <span class="risk-high">1</span> 个，中危漏洞 <span class="risk-medium">0</span> 个，低危漏洞 <span class="risk-low">0</span> 个。</p>
+<table class=table>
+<thead>
+<tr>
+<th width=120px>漏洞名称</th>
+<th>漏洞等级</th>
+<th>漏洞 URL</th>
+</tr>
+</thead>
+<tbody>
+<tr><td width="180px">Apache Druid 未授权访问漏洞</td><td class="risk-high">高危</td><td>http://127.0.0.1/druid/index.html</td></tr>
+</tbody>
+</table>
+</div>
+<div class=content id=details>
+<h2>漏洞详情</h2><hr>
+<h3>Apache Druid 未授权访问漏洞</h3><h4>漏洞 URL：</h4><p>http://127.0.0.1/druid/index.html</p><h4>漏洞等级：<span class="risk-high">高危</span><p></p></h4><h4>漏洞描述：</h4><p>Apache Druid 未授权访问漏洞是指由于配置缺陷或安全机制缺失，导致攻击者无需身份验证即可直接访问 Druid 集群的敏感接口或功能，获取所有数据源的敏感信息。</p><h4>漏洞 POC：</h4><div class="window"><div class="dots"><div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div></div><button class="copy-button" onclick="copy('code')">Copy</button><pre tabindex="0"><code id="code"><span style="display:flex;"><span>GET /druid/index.html HTTP/1.1</span></span><span style="display:flex;"><span>Host: ty-tyjqzx.wyuas.edu.cn</span></span><span style="display:flex;"><span>User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36</span></span><span style="display:flex;"><span>Connection: close</span></span></code></pre></div><div class="window"><div class="dots"><div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div></div><button class="copy-button" onclick="copy('code')">Copy</button><pre tabindex="0"><code id="code"><span style="display:flex;"><span>HTTP/1.1 200 </span></span><span style="display:flex;"><span>Connection: close</span></span><span style="display:flex;"><span>Content-Length: 3379</span></span><span style="display:flex;"><span>Access-Control-Allow-Methods: GET,POST,OPTIONS,PUT,DELETE</span></span><span style="display:flex;"><span>Content-Type: text/html;charset=utf-8</span></span><span style="display:flex;"><span>Date: Wed, 21 May 2025 10:58:49 GMT</span></span><span style="display:flex;"><span>Server: nginx</span></span>
+<span style="display:flex;"><span>&lt;!doctype html&gt;</span></span><span style="display:flex;"><span>&lt;html&gt;</span></span><span style="display:flex;"><span>	&lt;head&gt;</span></span><span style="display:flex;"><span>		&lt;title class=&#34;lang&#34; langKey=&#34;xxxx&#34;&gt;<span style="color:#ff79c6;">Druid Stat Index</span>&lt;/title&gt;</span></span><span style="display:flex;"><span>		&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=utf8&#34; /&gt;</span></span><span style="display:flex;"><span>		&lt;link href=&#39;css/bootstrap.min.css&#39; rel=&#34;stylesheet&#34; /&gt;</span></span><span style="display:flex;"><span>		&lt;link href=&#34;css/style.css&#34; type=&#34;text/css&#34; rel=&#34;stylesheet&#34;/&gt;</span></span><span style="display:flex;"><span>    	&lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&gt;&lt;/script&gt;</span></span><span style="display:flex;"><span>    	&lt;script src=&#34;js/lang.js&#34; type=&#34;text/javascript&#34; charset=&#34;utf8&#34;&gt;&lt;/script&gt;</span></span><span style="display:flex;"><span>		&lt;script src=&#34;js/common.js&#34; type=&#34;text/javascript&#34; charset=&#34;utf8&#34;&gt;&lt;/script&gt;</span></span><span style="display:flex;"><span>	&lt;/head&gt;</span></span><span style="display:flex;"><span>	&lt;body&gt;</span></span><span style="display:flex;"><span>		</span></span><span style="display:flex;"><span>    	&lt;div class=&#34;container&#34;&gt;</span></span><span style="display:flex;"><span>          				&lt;h3&gt;</span></span><span style="display:flex;"><span>          					Stat Index</span></span><span style="display:flex;"><span>          					&lt;a href=&#34;basic.json&#34; target=&#34;_blank&#34; class=&#34;lang&#34; langKey=&#34;ViewJSONAPI&#34;&gt;<span style="color:#ff79c6;">View JSON API</span>&lt;/a&gt;</span></span><span style="display:flex;"><span>          				&lt;/h3&gt;</span></span><span style="display:flex;"><span>						&lt;table id=&#34;dataTable&#34; style=&#34;background-color: #fff&#34; class=&#34;table table-bordered responsive-utilities&#34;&gt;</span></span><span style="display:flex;"><span>							&lt;tr &gt;</span></span><span style="display:flex;"><span>								&lt;td valign=&#34;top&#34; width=&#34;100&#34; class=&#34;td_lable lang&#34;  langKey=&#34;Version&#34;&gt;</span></span><span style="display:flex;"><span>									Version</span></span><span style="display:flex;"><span>								&lt;/td&gt;</span></span><span style="display:flex;"><span>								&lt;td id=&#34;DruidVersion&#34; width=&#34;95%&#34;&gt;&lt;/td&gt;</span></span><span style="display:flex;"><span>							&lt;/tr&gt;</span></span><span style="display:flex;"><span>		</span></span><span style="display:flex;"><span>......</span></span></code></pre></div><h4>修复建议：</h4><ul><li>1.启用 druid 身份权限校验功能</li><li>2.或使用 IP 白名单机制限制 Druid 的访问</li></ul><p></p>
+</div>
+<div class=content id=appends>
+<h2>附录内容</h2><hr>
+<h3>URL | API 扫描结果</h3>
+<div class="window"><div class="dots"><div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div></div><button class="copy-button" onclick="copy('code')">Copy</button><pre tabindex="0"><code id="code">[<span style="color:#ff79c6;">WAR</span>] No Results Found!</code></pre></div><h3>PASSWORD | USERNAME | EMAIL | KEY | IP | ... 识别结果</h3>
+<div class="window"><div class="dots"><div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div></div><button class="copy-button" onclick="copy('code')">Copy</button><pre tabindex="0"><code id="code"></code></pre></div>
+</div>
+<footer class=footer>
+<p>&copy; 2025 [appsx]. 保留所有权利。</p>
+</footer>
+</div>
+</body>
+<div class="message"id=message></div><script>function copy(id){const msg=document.getElementById("message");const code=document.getElementById(id).innerText.replace(/\n\n/g,'\n');navigator.clipboard.writeText(code).then(()=>{msg.textContent="Copy Successfully"}).catch((err)=>{msg.textContent="Copy error"});msg.style.display='block';setTimeout(()=>{msg.style.display='none'},2000)}</script>
+</html>
