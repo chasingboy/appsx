@@ -1,0 +1,57 @@
+# config yaml V2.0
+
+name: APPSX CONFIG
+
+# setting work path where save results, default -> $HOME/desktop/xworks.
+workpath: ""
+
+# setting proxy eg: http://127.0.0.1:8080
+proxy: ""
+
+# tools path
+chrome: ""
+
+# setting nuclei poc.
+file-poc-path: ""
+http-poc-path: ""
+
+# httpx running, filter title blacklist
+title-blacks: 
+  - "非法访问"
+  - "页面不存在"
+
+# filter domain when select links from javascript files.
+domain-blacks: 
+  - "github.com"
+  - "google.com"
+  - "google.cn"
+  - "element-plus.org"
+  - "angularjs.org"
+  - ".gov.cn"
+  - "apache.org"
+  - "gitee.com"
+  - "support.apple.com"
+  - "bootcss.com"
+  - "tiny.cloud"
+  - "oasis-open.org"
+
+# allow crawling extensions
+allow-extensions:
+  - ".js"
+  - ".php"
+  - ".html"
+  - ".htm"
+  - ".asp"
+  - ".aspx"
+  - ".jsp"
+  - ".jspx"
+  - ".do"
+  - ".action"
+
+# script blacklist
+script-blacks:
+  - "vue.min.js"
+  - "axios.min.js"
+  - "moment.min.js"
+  - "jquery.min.js"
+  - "jsencrypt.min.js"
