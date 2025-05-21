@@ -11,16 +11,17 @@
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/appsx.png">
 
 ### 前言
-在WEB渗透测试中，经常需要收集前端js文件中的信息，比如提取API信息｜URL信息｜敏感信息等。appsx 工具的核心理念就是把这一过程自动化，能够提升渗透测试的效率。
+在 WEB 渗透测试中，经常需要收集前端 js 文件中的信息，比如提取 API 信息｜URL 信息｜敏感信息等。appsx 工具的核心理念就是把这一过程自动化，能够提升渗透测试的效率。
 
 ### 功能
 * 爬虫提供普通模式和 headless 模式
-* 自动爬取js｜html｜php｜asp 等页面
-* 自动识别 webpack 打包的 js 文件
-* 下载爬取的文件并提取 API 信息
-* 批量测试 URL 和 API 信息
-* 默认调用 dirsx 进行扫描
-* 启用 nuclei 进行敏感信息识别
+* 支持自动爬取 js｜html｜php｜asp 等页面
+* 支持自动识别 webpack 打包的 js 文件
+* 支持下载爬取的文件并提取 API 信息
+* 支持批量测试 URL 和 API 信息
+* 支持自定义 yaml 格式 poc 扫描
+* 支持对爬取的页面进行敏感信息识别
+* 支持导出敏感信息识别报告、扫描报告
 
 ### 基本使用
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/run.png">
@@ -31,15 +32,10 @@ root$ appsx -u http://127.0.0.1
 ```
 * headless 模式
 ```
-# 需要在 config.yaml 中配置 nuclei 路径
+# 需要在 config.yaml 中配置 chrome 路径
 root$ appsx -u http://127.0.0.1 --headless
 ```
-* 启用 nuclei
-```
-root$ appsx -u http://127.0.0.1 --nuclei
-```
 * 自动提取 API 信息并进行探测未授权漏洞
-  > fofa 任意找的 WEB
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/result.png">
 
 ### chromium 下载
@@ -52,11 +48,11 @@ Chromium@https://vikyd.github.io/download-chromium-history-version/#/
 ### 结果保存
 默认保存在桌面的 xworks 文件夹，可通过 config.yaml 文件配置
 ```
-# crawler-urls.txt -> 爬取的 URL 结果
+# crawler-urls.txt   -> 爬取的 URL 结果
 # select-results.txt -> 提取的 API 结果
-# httpx-results.txt -> URL|API 探测结果
+# httpx-results.txt  -> URL|API 探测结果
 # static -> 下载的文件结果
-2024-12-02-16-23-20-test.gzalkj.com_sadmin root$ tree .
+2025-05-20-16-23-20-127.0.0.1 kali$ tree .
 .
 ├── crawler-urls.txt
 ├── httpx-results.txt
@@ -87,41 +83,66 @@ root$ appsx --license xxx-c3a9f4d1cca725543a2a10b2cf8a224a-license.appsx
 详细参考-> https://github.com/chasingboy/appsx/blob/main/activate.md
 
 ### TODO
-* 增加基础漏洞扫描模块
-* 增加 pdf｜docx 报告导出模块
-* ... ...
+* 增加漏洞扫描 | 指纹识别 poc  
 
 ### config.yaml
 ```
-# 设置 js 等文件下载路径，如果没有设置, 默认存放在桌面的 xworks 文件夹
+# config yaml V2.0
+name: APPSX CONFIG
+
 # setting work path where save results, default -> $HOME/desktop/xworks.
 workpath: ""
 
-# 设置 nuclei 和 chromium 浏览器的路径
-nuclei: "/tools/nuclei/nuclei"
-chrome: "/tools/chrome/Chromium.app/Contents/MacOS/Chromium"
+# setting proxy eg: http://127.0.0.1:8080
+proxy: ""
 
-# 自定义添加 dirsx 扫描字典, 文件模式｜字符串
-dirsx:
-  payloads-file: "/tools/poc/wordlist.txt"
+# tools path
+chrome: ""
 
-  payloads:
-  - "admin"
-  ... ...
+# setting nuclei poc.
+file-poc-path: ""
+http-poc-path: ""
 
-# 设置爬虫允许后缀
+# httpx running, filter title blacklist
+title-blacks: 
+  - "非法访问"
+  - "页面不存在"
+
+# filter domain when select links from javascript files.
+domain-blacks: 
+  - "github.com"
+  - "google.com"
+  - "google.cn"
+  - "element-plus.org"
+  - "angularjs.org"
+  - ".gov.cn"
+  - "apache.org"
+  - "gitee.com"
+  - "support.apple.com"
+  - "bootcss.com"
+  - "tiny.cloud"
+  - "oasis-open.org"
+
+# allow crawling extensions
 allow-extensions:
   - ".js"
   - ".php"
-  ... ...
+  - ".html"
+  - ".htm"
+  - ".asp"
+  - ".aspx"
+  - ".jsp"
+  - ".jspx"
+  - ".do"
+  - ".action"
 
-# 设置过滤的 js 文件
+# script blacklist
 script-blacks:
   - "vue.min.js"
   - "axios.min.js"
-  ... ...
-
-# 其他设置 ... ...
+  - "moment.min.js"
+  - "jquery.min.js"
+  - "jsencrypt.min.js"
 ```
 
 ### 敏感信息扫描
@@ -133,7 +154,7 @@ poc 来源 ——> 整合 nuclei file 类型 POC + 个人编写 POC
 
 ### appsx -h
 ```bash
-~ kali$ appsx -h
+kali$ appsx -h
 
           
        █████╗ ██████╗ ██████╗ ███████╗██╗  ██╗
@@ -151,7 +172,6 @@ Usage:
 Common Options:
   -u, --url=              input url of target
   -l, --list=             input file containing list of target
-  -w, --wordlist=         appoint wordlist for scanning directory
       --title-len=        set title display length (default: 50)
   -t, --threads=          number of threads to use (default: 20)
       --timeout=          httpx running timeout in seconds (default: 5)
@@ -159,19 +179,25 @@ Common Options:
                           400,401,404,406,416,501,502,503)
       --config=           path to the configuration file
       --proxy=            set request proxy eg: --proxy http://127.0.0.1:8080
+      --no-show-bar       disable show progress bar
       --target-dir=       set target directory to select router and test eg: --target-dir "./static"
-      --only-crawler      only crawling web files|router|..., disable httpx running
       --crawling-timeout= common crawling timeout in seconds (default: 10)
       --crawling-threads= number of threads to crawling (default: 5)
-  -m, --maxnum=           maxnum links to crawl (default: 100)
+  -m, --maxnum=           max number of links to crawl (default: 100)
       --headless          enable headless crawling
       --headless-timeout= headless crawling timeout in seconds (default: 10)
       --show-browser      show the browser on the screen with headless mode
 
+Templates Options:
+      --id=               templates to run based on template ids (comma-separated, file)
+      --tags=             templates to run based on tags (comma-separated, file)
+      --payload-threads=  number of threads to brute on poc payload  (default: 10)
+
 Plugins Options:
-      --no-dirsx          disable running dirsx default(enable)
-      --nuclei            enable running nuclei
-      --xray              enable running xray
+      --crawler           only crawling web files|router|..., disable httpx|poc|...
+      --select            enable select routers|password|email|.. from files
+      --bypass            enable 40X bypass testing
+      --pocscan           enable poc scanning
 
 Activation Options:
       --activate          enable to activate appsx
