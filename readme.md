@@ -1,5 +1,5 @@
 <h1 align="center">appsx</h1>
-<h3 align="center">appsx 是一款自动化信息收集｜敏感信息识别｜未授权漏洞扫描｜敏感信息识别｜漏洞扫描工具</h3>
+<h3 align="center">appsx 是一款自动化信息收集｜敏感信息识别｜未授权漏洞扫描｜敏感信息识别｜指纹识别｜常见漏洞扫描工具</h3>
 <p align="center">
   <img src="https://img.shields.io/badge/Version-V1.1.0-green?style=flat">
   <img src="https://img.shields.io/github/stars/chasingboy/appsx?style=flat&labelColor=rgb(41%2C52%2C52)&color=green">
