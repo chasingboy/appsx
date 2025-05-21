@@ -1,5 +1,5 @@
 <h1 align="center">appsx</h1>
-<h3 align="center">appsx 是一款自动化信息收集｜敏感信息识别｜未授权漏洞扫描工具</h3>
+<h3 align="center">appsx 是一款自动化信息收集｜敏感信息识别｜未授权漏洞扫描｜敏感信息识别｜漏洞扫描工具</h3>
 <p align="center">
   <img src="https://img.shields.io/badge/Version-V1.1.0-green?style=flat">
   <img src="https://img.shields.io/github/stars/chasingboy/appsx?style=flat&labelColor=rgb(41%2C52%2C52)&color=green">
@@ -19,9 +19,10 @@
 * 支持自动识别 webpack 打包的 js 文件
 * 支持下载爬取的文件并提取 API 信息
 * 支持批量测试 URL 和 API 信息
-* 支持自定义 yaml 格式 poc 扫描
+* 支持先指纹识别再 POC 扫描漏洞
 * 支持对爬取的页面进行敏感信息识别
 * 支持导出敏感信息识别报告、扫描报告
+* 支持对 40X URL Bypass 探测
 
 ### 基本使用
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/run.png">
@@ -35,8 +36,37 @@ root$ appsx -u http://127.0.0.1
 # 需要在 config.yaml 中配置 chrome 路径
 root$ appsx -u http://127.0.0.1 --headless
 ```
-* 自动提取 API 信息并进行探测未授权漏洞
+* POC 扫描模式
+```
+root$ appsx -u http://127.0.0.1 --pocsan
+```
+**先对目标进行指纹识别，再使用对应 POC 进行漏洞扫描**
+<img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/scan.png">
+
+*  敏感信息识别模式
+```
+root$ appsx --target-dir /root/static --select
+```
+### 自动化扫描过程
+对目标 URL 进行爬取文件 php | js | html | asp | jsp |... -> 下载爬取到的页面 -> 提取 API 信息并进行探测未授权漏洞 -> 对目标进行指纹识别 -> 使用指纹对应 POC 进行漏洞扫描 -> 使用 select 模块进行敏感信息识别 -> 输出报告
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/result.png">
+
+### 插件模式
+使用插件模式参数指定某一功能
+```
+--crawler -> 只对目标 URL 进行爬取不进行漏洞扫描
+--select  -> 只对指定的目录｜文件进行敏感信息识别
+--bypass  -> 只对目标 URL 进行 40X Bypass 探测
+--pocscan -> 只对目标 URL 进行 poc 扫描
+```
+
+```bash
+Plugins Options:
+      --crawler           only crawling web files|router|..., disable httpx|poc|...
+      --select            enable select routers|password|email|.. from files
+      --bypass            enable 40X bypass testing
+      --pocscan           enable poc scanning
+```
 
 ### chromium 下载
 --headless 模式需要在 config.yaml 文件配置 chromium
@@ -48,9 +78,12 @@ Chromium@https://vikyd.github.io/download-chromium-history-version/#/
 ### 结果保存
 默认保存在桌面的 xworks 文件夹，可通过 config.yaml 文件配置
 ```
-# crawler-urls.txt   -> 爬取的 URL 结果
-# select-results.txt -> 提取的 API 结果
-# httpx-results.txt  -> 探测的 API 结果
+# crawler-urls.txt      -> 爬取的 URL 结果
+# select-results.txt    -> 提取的 API 结果
+# httpx-results.txt     -> 探测的 API 结果
+# APPSX扫描报告.html
+# APPSX-SELECT报告.html
+
 # static -> 保存下载的文件
 2025-05-20-16-23-20-127.0.0.1 kali$ tree .
 .
@@ -61,6 +94,13 @@ Chromium@https://vikyd.github.io/download-chromium-history-version/#/
     ├── 097628.chunk-2125b98f.99d70750.js
     ├── ... ...
 ```
+
+### 报告样例
+[1] 扫描报告-> https://htmlpreview.github.io/?https://github.com/chasingboy/appsx/blob/main/reports/127.0.0.1-APPSX%E6%89%AB%E6%8F%8F%E6%8A%A5%E5%91%8A-1.html
+
+[2] 扫描报告-> https://htmlpreview.github.io/?https://github.com/chasingboy/appsx/blob/main/reports/127.0.0.1-APPSX%E6%89%AB%E6%8F%8F%E6%8A%A5%E5%91%8A-2.html
+
+[3] 识别报告-> https://htmlpreview.github.io/?https://github.com/chasingboy/appsx/blob/main/reports/APPSX-SELECT%E6%8A%A5%E5%91%8A.html
 
 ### 激活方式
 执行命令生成 **activate.appsx 文件**, 通过邮件｜微信群提交 **activate.appsx文件** 至开发者获取 license
@@ -82,8 +122,6 @@ root$ appsx --license xxx-c3a9f4d1cca725543a2a10b2cf8a224a-license.appsx
 ```
 详细参考-> https://github.com/chasingboy/appsx/blob/main/activate.md
 
-### TODO
-* 增加漏洞扫描 | 指纹识别 poc  
 
 ### config.yaml
 ```
@@ -146,11 +184,14 @@ script-blacks:
 ```
 
 ### 敏感信息扫描
-poc 来源 ——> 整合 nuclei file 类型 POC + 个人编写 POC
+POC 来源 ——> 整合 nuclei file 类型 POC + 个人编写 POC
 * 识别用户信息-> 用户名｜密码｜邮箱｜key｜token｜...
 * 识别内网 IP 泄露
 * 识别文件名-> zip｜docx｜pdf｜excel｜...
 * 识别 js.map 文件泄露
+
+### TODO
+* 增加漏洞扫描 | 指纹识别 POC
 
 ### appsx -h
 ```bash
