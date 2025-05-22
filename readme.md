@@ -184,14 +184,14 @@ script-blacks:
 ```
 
 ### 敏感信息扫描
-POC 来源 ——> 整合 nuclei file 类型 POC + 个人编写 POC
+POC 来源 ——> 整合 nuclei POC + 个人编写 POC
 * 识别用户信息-> 用户名｜密码｜邮箱｜key｜token｜...
 * 识别内网 IP 泄露
 * 识别文件名-> zip｜docx｜pdf｜excel｜...
 * 识别 js.map 文件泄露
 
 ### TODO
-* 增加漏洞扫描 | 指纹识别 POC
+* 漏洞扫描 | 指纹识别 POC
 
 ### appsx -h
 ```bash
@@ -249,6 +249,10 @@ Activation Options:
 Help Options:
   -h, --help              Show this help message
 ```
+### 公众号
+该公众号用于编写 Xtools 系列工具使用文档和工具更新通知
+
+<p align="center"><img width="300" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/xsec.png"></p>
 
 ### 免责声明
 请在使用本工具时遵循使用者以及目标系统所在国当地的相关法律法规，一切未授权测试均是不被允许的。对于因使用工具而引发的任何直接、间接、偶然、特殊性的损害均由**使用者承担责任**。
