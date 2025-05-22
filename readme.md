@@ -1,5 +1,5 @@
 <h1 align="center">appsx</h1>
-<h3 align="center">appsx 是一款自动化信息收集｜敏感信息识别｜未授权漏洞扫描｜敏感信息识别｜指纹识别｜常见漏洞扫描工具</h3>
+<h3 align="center">appsx 是一款自动化信息收集｜敏感信息识别｜未授权漏洞扫描｜指纹识别｜常见漏洞扫描工具</h3>
 <p align="center">
   <img src="https://img.shields.io/badge/Version-V1.1.0-green?style=flat">
   <img src="https://img.shields.io/github/stars/chasingboy/appsx?style=flat&labelColor=rgb(41%2C52%2C52)&color=green">
@@ -257,3 +257,6 @@ Help Options:
 ### 免责声明
 请在使用本工具时遵循使用者以及目标系统所在国当地的相关法律法规，一切未授权测试均是不被允许的。对于因使用工具而引发的任何直接、间接、偶然、特殊性的损害均由**使用者承担责任**。
 详细内容请查看@https://github.com/chasingboy/appsx/blob/main/assets/readme.md
+
+### 特别感谢
+projectdiscovery@https://github.com/projectdiscovery/nuclei
