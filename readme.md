@@ -103,24 +103,7 @@ Chromium@https://vikyd.github.io/download-chromium-history-version/#/
 [3] 识别报告-> https://htmlpreview.github.io/?https://github.com/chasingboy/appsx/blob/main/reports/APPSX-SELECT%E6%8A%A5%E5%91%8A.html
 
 ### 激活方式
-执行命令生成 **activate.appsx 文件**, 通过邮件｜微信群提交 **activate.appsx文件** 至开发者获取 license
-
-⚠️注意: **linux 系统需要在root权限下才能运行**
-```bash
-# appsx -h
-Activation Options:
-      --activate          enable to activate appsx
-      --activate-help     show activate help
-      --license=          set license file eg: --license license.appsx
-      --license-time      show license activated time and expiry time
-
-# 在当前目录生成 activate.appsx 文件, 通过邮件或者微信群提交该文件给开发者获取 license
-root$ appsx --activate
-
-# 激活 appsx, 比如 license 文件: xxx-c3a9f4d1cca725543a2a10b2cf8a224a-license.appsx
-root$ appsx --license xxx-c3a9f4d1cca725543a2a10b2cf8a224a-license.appsx
-```
-详细参考-> https://github.com/chasingboy/appsx/blob/main/activate.md
+**购买 lincese**->详细参考-> https://github.com/chasingboy/appsx/blob/main/activate.md
 
 
 ### config.yaml
