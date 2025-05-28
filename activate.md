@@ -26,6 +26,3 @@ root$ appsx --license license.appsx
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/license.png">
 
 付款时请备注个人ID+年限，并在微信群或者邮箱(1215829953@qq.com)发送 activate.appsx 获取 license
-
-### Xtools 微信群
-<img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/xtools.png">
