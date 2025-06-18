@@ -1,7 +1,7 @@
 <h1 align="center">appsx</h1>
 <h3 align="center">appsx 是一款自动化信息收集｜敏感信息识别｜未授权漏洞扫描｜指纹识别｜常见漏洞扫描工具</h3>
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-V1.1.0-green?style=flat">
+  <img src="https://img.shields.io/badge/Version-V1.1.2-green?style=flat">
   <img src="https://img.shields.io/github/stars/chasingboy/appsx?style=flat&labelColor=rgb(41%2C52%2C52)&color=green">
   <img src="https://img.shields.io/github/issues/chasingboy/appsx">
   <img src="https://img.shields.io/github/downloads/chasingboy/appsx/total?style=flat&labelColor=rgb(41%2C52%2C52)&color=green">
@@ -14,15 +14,15 @@
 在 WEB 渗透测试中，经常需要收集前端 js 文件中的信息，比如提取 API 信息｜URL 信息｜敏感信息等。appsx 工具的核心理念就是把这一过程自动化，能够提升渗透测试的效率。
 
 ### 功能
-* 爬虫提供普通模式和 headless 模式
-* 支持自动爬取 js｜html｜php｜asp 等页面
-* 支持自动识别 webpack 打包的 js 文件
-* 支持下载爬取的文件并提取 API 信息
-* 支持批量测试 URL 和 API 信息
-* 支持先指纹识别再 POC 扫描漏洞
-* 支持对爬取的页面进行敏感信息识别
-* 支持导出敏感信息识别报告、扫描报告
-* 支持对 40X URL Bypass 探测
+* ✅ 爬虫提供普通模式和 headless 模式
+* ✅ 支持自动爬取 js｜html｜php｜asp 等页面
+* ✅ 支持自动识别 webpack 打包的 js 文件
+* ✅ 支持下载爬取的文件并提取 API 信息
+* ✅ 支持批量测试 URL 和 API 信息
+* ✅ 支持先指纹识别再 POC 扫描漏洞
+* ✅ 支持对爬取的页面进行敏感信息识别
+* ✅ 支持导出敏感信息识别报告、扫描报告
+* ✅ 支持对 40X URL Bypass 探测
 
 ### 基本使用
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/run.png">
@@ -243,3 +243,10 @@ Help Options:
 
 ### 特别感谢
 projectdiscovery@https://github.com/projectdiscovery/nuclei
+
+### 更新记录
+[+] 2025-06-15 修复 header  格式化时 map 问题，修复 webpack 识别错误问题
+
+[+] 2025-06-15 修复 crawler 爬虫问题，增强爬虫规则
+
+[+] 2025-06-15 增加 word|regex|binary matcher 的 status code 判断
