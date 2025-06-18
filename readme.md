@@ -249,4 +249,4 @@ projectdiscovery@https://github.com/projectdiscovery/nuclei
 
 [+] 2025-06-15 修复 crawler 爬虫问题，增强爬虫规则
 
-[+] 2025-06-15 增加 word|regex|binary matcher 的 status code 判断
+[+] 2025-06-15 增加 word｜regex｜binary matcher 的 status code 判断
