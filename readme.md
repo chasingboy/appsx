@@ -14,15 +14,15 @@
 在 WEB 渗透测试中，经常需要收集前端 js 文件中的信息，比如提取 API 信息｜URL 信息｜敏感信息等。appsx 工具的核心理念就是把这一过程自动化，能够提升渗透测试的效率。
 
 ### 功能
-* ✅ 爬虫提供普通模式和 headless 模式
-* ✅ 支持自动爬取 js｜html｜php｜asp 等页面
-* ✅ 支持自动识别 webpack 打包的 js 文件
-* ✅ 支持下载爬取的文件并提取 API 信息
-* ✅ 支持批量测试 URL 和 API 信息
-* ✅ 支持先指纹识别再 POC 扫描漏洞
-* ✅ 支持对爬取的页面进行敏感信息识别
-* ✅ 支持导出敏感信息识别报告、扫描报告
-* ✅ 支持对 40X URL Bypass 探测
+✅ 爬虫提供普通模式和 headless 模式<br>
+✅ 支持自动爬取 js｜html｜php｜asp 等页面<br>
+✅ 支持自动识别 webpack 打包的 js 文件<br>
+✅ 支持下载爬取的文件并提取 API 信息<br>
+✅ 支持批量测试 URL 和 API 信息<br>
+✅ 支持先指纹识别再 POC 扫描漏洞<br>
+✅ 支持对爬取的页面进行敏感信息识别<br>
+✅ 支持导出敏感信息识别报告、扫描报告<br>
+✅ 支持对 40X URL Bypass 探测<br>
 
 ### 基本使用
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/run.png">
@@ -103,8 +103,11 @@ Chromium@https://vikyd.github.io/download-chromium-history-version/#/
 [3] 识别报告-> https://htmlpreview.github.io/?https://github.com/chasingboy/appsx/blob/main/reports/APPSX-SELECT%E6%8A%A5%E5%91%8A.html
 
 ### 激活方式
-**购买 lincese**->详细参考-> https://github.com/chasingboy/appsx/blob/main/activate.md
+**购买 license**->详细参考-> https://github.com/chasingboy/appsx/blob/main/activate.md
 
+### 试用激活
+微信小程序获取试用 license
+<p align="center"><img width="300" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/mini.png"></p>
 
 ### config.yaml
 ```
@@ -250,3 +253,5 @@ projectdiscovery@https://github.com/projectdiscovery/nuclei
 [+] 2025-06-15 修复 crawler 爬虫问题，增强爬虫规则
 
 [+] 2025-06-15 增加 word｜regex｜binary matcher 的 status code 判断
+
+[+] 2025-08-05 修复 URL 连接错误问题，修改部分 POC
