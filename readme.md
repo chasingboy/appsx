@@ -1,7 +1,7 @@
 <h1 align="center">appsx</h1>
 <h3 align="center">appsx 是一款自动化信息收集｜敏感信息识别｜未授权漏洞扫描｜指纹识别｜常见漏洞扫描工具</h3>
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-V1.1.5-green?style=flat">
+  <img src="https://img.shields.io/badge/Version-V1.2.0-green?style=flat">
   <img src="https://img.shields.io/github/stars/chasingboy/appsx?style=flat&labelColor=rgb(41%2C52%2C52)&color=green">
   <img src="https://img.shields.io/github/issues/chasingboy/appsx">
   <img src="https://img.shields.io/github/downloads/chasingboy/appsx/total?style=flat&labelColor=rgb(41%2C52%2C52)&color=green">
@@ -255,3 +255,5 @@ projectdiscovery@https://github.com/projectdiscovery/nuclei
 [+] 2025-06-15 增加 word｜regex｜binary matcher 的 status code 判断
 
 [+] 2025-08-05 修复 URL 连接错误问题，修改部分 POC
+
+[+] 2025-08-25 重构指纹识别扫描引擎｜重构 bypass 扫描引擎｜完善和增加指纹识别 POC
