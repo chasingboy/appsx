@@ -48,7 +48,13 @@ root$ appsx -u http://127.0.0.1 --pocsan
 root$ appsx --target-dir /root/static --select
 ```
 ### 自动化扫描过程
-对目标 URL 进行爬取文件 php | js | html | asp | jsp |... -> 下载爬取到的页面 -> 提取 API 信息并进行探测未授权漏洞 -> 对目标进行指纹识别 -> 使用指纹对应 POC 进行漏洞扫描 -> 使用 select 模块进行敏感信息识别 -> 输出报告
+对目标 URL 进行爬取文件 php | js | html | asp | jsp |... 
+* -> 下载爬取到的页面
+* -> 提取 API 信息并进行探测未授权漏洞
+* -> 对目标进行指纹识别
+* -> 使用指纹对应 POC 进行漏洞扫描
+* -> 使用 select 模块进行敏感信息识别
+* -> 输出报告
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/result.png">
 
 ### 插件模式
