@@ -57,8 +57,8 @@ root$ appsx --target-dir /root/static --select
 * -> 输出报告
 <img width="1154" alt="image" src="https://github.com/chasingboy/appsx/blob/main/assets/result.png">
 
-### 插件模式
-使用插件模式参数指定某一功能
+### 插件模块
+使用插件模块参数指定某一功能
 ```
 --crawler -> 只对目标 URL 进行爬取不进行漏洞扫描
 --select  -> 只对指定的目录｜文件进行敏感信息识别
@@ -74,12 +74,12 @@ Plugins Options:
       --pocscan           enable poc scanning
 ```
 
-### chromium 下载
+### --headless
 --headless 模式需要在 config.yaml 文件配置 chromium
 
 **不要下载新版本, 新版本在爬取 http 链接时会自动转为 https, 导致访问出错, 108.x.x.x 以下的版本都是可以的**
 
-Chromium@https://vikyd.github.io/download-chromium-history-version/#/
+Chromium 下载链接@https://vikyd.github.io/download-chromium-history-version/#/
 
 ### 结果保存
 默认保存在桌面的 xworks 文件夹，可通过 config.yaml 文件配置
