@@ -264,4 +264,4 @@ projectdiscovery@https://github.com/projectdiscovery/nuclei
 
 [+] 2025-08-25【重构】指纹识别扫描引擎｜重构 bypass 扫描引擎｜完善和增加指纹识别 POC
 
-[+] 2025-08-25【新增】JS 混淆解析｜支持 POC 上传文件｜优化部分逻辑
+[+] 2025-08-25【新增】JS 混淆解析｜支持 POC 上传文件｜优化部分扫描逻辑
