@@ -254,12 +254,14 @@ Help Options:
 projectdiscovery@https://github.com/projectdiscovery/nuclei
 
 ### 更新记录
-[+] 2025-06-15 修复 header  格式化时 map 问题，修复 webpack 识别错误问题
+[+] 2025-06-15【修复】header  格式化时 map 问题｜复 webpack 识别错误问题
 
-[+] 2025-06-15 修复 crawler 爬虫问题，增强爬虫规则
+[+] 2025-06-15【修复】crawler 爬虫问题｜增强爬虫规则
 
-[+] 2025-06-15 增加 word｜regex｜binary matcher 的 status code 判断
+[+] 2025-06-15【增加】word｜regex｜binary matcher 的 status code 判断
 
-[+] 2025-08-05 修复 URL 连接错误问题，修改部分 POC
+[+] 2025-08-05【修复】URL 连接错误问题｜修改部分 POC
 
-[+] 2025-08-25 重构指纹识别扫描引擎｜重构 bypass 扫描引擎｜完善和增加指纹识别 POC
+[+] 2025-08-25【重构】指纹识别扫描引擎｜重构 bypass 扫描引擎｜完善和增加指纹识别 POC
+
+[+] 2025-08-25【新增】JS 混淆解析｜支持 POC 文件上传｜优化部分逻辑
